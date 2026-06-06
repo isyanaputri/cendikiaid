@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'sign_in_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
@@ -7,7 +8,9 @@ class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF3F6FA), // Warna dasar krem/putih kebiruan
+      backgroundColor: const Color(
+        0xFFF3F6FA,
+      ), // Warna dasar krem/putih kebiruan
       body: Stack(
         children: [
           // --- LAPISAN 1: BACKGROUND BLOB (Bercak Biru) ---
@@ -57,7 +60,7 @@ class WelcomeScreen extends StatelessWidget {
                                 color: Colors.blue.withOpacity(0.3),
                                 blurRadius: 10,
                                 offset: const Offset(0, 4),
-                              )
+                              ),
                             ],
                           ),
                         ),
@@ -82,19 +85,30 @@ class WelcomeScreen extends StatelessWidget {
                   child: Container(
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.4), // Warna dasar transparan
-                      borderRadius: const BorderRadius.vertical(top: Radius.circular(40)),
+                      color: Colors.white.withOpacity(
+                        0.4,
+                      ), // Warna dasar transparan
+                      borderRadius: const BorderRadius.vertical(
+                        top: Radius.circular(40),
+                      ),
                       border: Border.all(
-                        color: Colors.white.withOpacity(0.6), // Efek garis tepi kaca
+                        color: Colors.white.withOpacity(
+                          0.6,
+                        ), // Efek garis tepi kaca
                         width: 1.5,
                       ),
                     ),
                     child: ClipRRect(
-                      borderRadius: const BorderRadius.vertical(top: Radius.circular(40)),
+                      borderRadius: const BorderRadius.vertical(
+                        top: Radius.circular(40),
+                      ),
                       child: BackdropFilter(
                         filter: ImageFilter.blur(sigmaX: 20, sigmaY: 20),
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 32.0, vertical: 24.0),
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 32.0,
+                            vertical: 24.0,
+                          ),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -110,7 +124,7 @@ class WelcomeScreen extends StatelessWidget {
                                 ),
                               ),
                               const SizedBox(height: 40),
-                              
+
                               // Judul Teks
                               const Text(
                                 'Mulai belajar,\nkapan saja, di mana saja.',
@@ -122,7 +136,7 @@ class WelcomeScreen extends StatelessWidget {
                                 ),
                               ),
                               const SizedBox(height: 16),
-                              
+
                               // Subjudul Teks
                               const Text(
                                 'Ilmu tidak mengenal usia. Bersama cendekiaid,\nperjalanan belajarmu dimulai hari ini dan tidak\npernah berhenti.',
@@ -133,29 +147,35 @@ class WelcomeScreen extends StatelessWidget {
                                 ),
                               ),
                               const Spacer(),
-                              
+
                               // Tombol Mulai
                               Center(
                                 child: SizedBox(
-                                  width: 200, // Menyesuaikan lebar tombol di desain
+                                  width:
+                                      200, // Menyesuaikan lebar tombol di desain
                                   child: ElevatedButton(
                                     onPressed: () {
-                                      // Fitur navigasi langsung diaktifkan
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) => const DummyNextScreen(),
+                                          builder: (context) =>
+                                              const SignInScreen(),
                                         ),
                                       );
                                     },
                                     style: ElevatedButton.styleFrom(
                                       backgroundColor: const Color(0xFF4C7EBE),
-                                      padding: const EdgeInsets.symmetric(vertical: 16),
+                                      padding: const EdgeInsets.symmetric(
+                                        vertical: 16,
+                                      ),
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(30),
                                       ),
-                                      elevation: 5, // Sedikit bayangan pada tombol
-                                      shadowColor: const Color(0xFF4C7EBE).withOpacity(0.5),
+                                      elevation:
+                                          5, // Sedikit bayangan pada tombol
+                                      shadowColor: const Color(
+                                        0xFF4C7EBE,
+                                      ).withOpacity(0.5),
                                     ),
                                     child: const Text(
                                       'Mulai',
