@@ -54,7 +54,7 @@ dev_dependencies:
 flutter:
   assets:
     - assets/images/mascot.png
-    - assets/images/draft.png
+    - assets/images/pencil.png
     - assets/images/target.png
     - assets/images/mascot_welcome.png
   # The following line ensures that the Material Icons font is

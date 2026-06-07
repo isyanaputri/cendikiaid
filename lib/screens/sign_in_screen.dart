@@ -182,7 +182,7 @@ class _SignInScreenState extends State<SignInScreen> {
                                 child: Transform.rotate(
                                   angle: -0.5,
                                   child: Image.asset(
-                                    'assets/images/draft.png',
+                                    'assets/images/pencil.png',
                                     height: 25,
                                     errorBuilder: (c, e, s) => const Icon(
                                       Icons.edit,
